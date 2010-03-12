@@ -1,0 +1,16 @@
+<h1>Editing muscle</h1>
+
+<% form_for(@muscle) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @muscle %> |
+<%= link_to 'Back', muscles_path %>
