@@ -23337,3 +23337,157 @@ DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Pleas
 Rendering reports/progress
   [4;36;1mLift Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
 Completed in 18ms (View: 6, DB: 2) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (11.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExercises (20100312032713)
+Migrating to CreateMuscles (20100312224537)
+Migrating to CreateLifts (20100313151216)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `lifts`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `lifts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `muscles`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `muscles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:11:46) [GET]
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-13 16:11:47) [GET]
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 72ms (View: 64, DB: 3) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:12:13) [GET]
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:12:13) [GET]
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-13 16:12:13) [GET]
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:12:31) [GET]
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:12:31) [GET]
+  [4;35;1mLift Load (0.4ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-13 16:12:31) [GET]
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:13:08) [GET]
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:13:08) [GET]
+  [4;36;1mLift Load (0.9ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-13 16:13:08) [GET]
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 74ms (View: 4, DB: 2) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-13 16:13:30) [GET]
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-13 16:13:30) [GET]
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftrr/app/controllers/reports_controller.rb:7)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://0.0.0.0/reports/progress.xml]
