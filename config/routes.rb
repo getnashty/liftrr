@@ -1,8 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :weights
 
-  map.resources :maxes
-
   map.resources :muscles
 
   map.resources :exercises
