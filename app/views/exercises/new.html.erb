@@ -9,7 +9,9 @@
   </p>
   <p>
     <%= f.label :muscle_id %><br />
-    <%= f.text_field :muscle_id %>
+
+    <%= f.select (:muscle_id, @muscles.collect {|muscle| [ muscle.name, muscle.id ] }) %>
+
   </p>
   <p>
     <%= f.submit 'Create' %>
@@ -17,3 +19,4 @@
 <% end %>
 
 <%= link_to 'Back', exercises_path %>
+

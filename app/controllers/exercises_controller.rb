@@ -25,6 +25,7 @@ class ExercisesController < ApplicationController
   # GET /exercises/new.xml
   def new
     @exercise = Exercise.new
+    @muscles = Muscle.all
 
     respond_to do |format|
       format.html # new.html.erb
