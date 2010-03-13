@@ -7,9 +7,10 @@
   </tr>
 
 <% @exercises.each do |exercise| %>
+<% @exname=Muscle.find(exercise.muscle_id)%>
   <tr>
     <td><%=h exercise.name %></td>
-    <td><%=h exercise.muscle_id %></td>
+    <td><%=h @exname.name %></td>
     <td><%= link_to 'Show', exercise %></td>
     <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
     <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>

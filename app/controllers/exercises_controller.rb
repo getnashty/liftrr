@@ -3,7 +3,8 @@ class ExercisesController < ApplicationController
   # GET /exercises.xml
   def index
     @exercises = Exercise.all
-
+    @muscles = Muscle.all
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @exercises }

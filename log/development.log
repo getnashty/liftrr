@@ -9814,3 +9814,763 @@ Rendering template within layouts/exercises
 Rendering exercises/index
   [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
 Completed in 29ms (View: 22, DB: 2) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:31:55) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 38ms (View: 27, DB: 3) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:35:27) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.3ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #13 of app/views/exercises/index.html.erb:
+10:   <tr>
+11:     <td><%=h exercise.name %></td>
+12:     <td><%=h exercise.muscle_id %></td>
+13:     <td><%=h @muscle.name %></td>
+14:     <td><%= link_to 'Show', exercise %></td>
+15:     <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+16:     <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/exercises/index.html.erb:13
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (101.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:37:18) [GET]
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+
+ActionView::TemplateError (undefined method `muscle_id' for nil:NilClass) on line #10 of app/views/exercises/index.html.erb:
+7:   </tr>
+8: 
+9: <% @exercises.each do |exercise| %>
+10: <% @muscle.muscle_id%>
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+
+    app/views/exercises/index.html.erb:10
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:37:24) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #14 of app/views/exercises/index.html.erb:
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+14:     <td><%=h @muscle.name %></td>
+15:     <td><%= link_to 'Show', exercise %></td>
+16:     <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+17:     <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/exercises/index.html.erb:14
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (97.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:37:25) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #14 of app/views/exercises/index.html.erb:
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+14:     <td><%=h @muscle.name %></td>
+15:     <td><%= link_to 'Show', exercise %></td>
+16:     <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+17:     <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/exercises/index.html.erb:14
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-12 20:38:36) [GET]
+
+SyntaxError (/Users/elliot/work/liftrr/app/controllers/exercises_controller.rb:7: syntax error, unexpected '(', expecting kEND
+    @muscles = @muscle_name(params[:muscle_id])
+                            ^
+/Users/elliot/work/liftrr/app/controllers/exercises_controller.rb:7: syntax error, unexpected ')', expecting kEND):
+  
+
+Rendered rescues/_trace (92.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:39:13) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Muscle without an ID):
+  app/controllers/exercises_controller.rb:7:in `index'
+
+Rendered rescues/_trace (27.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:39:47) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+
+NoMethodError (undefined method `muscle_id' for :exercise:Symbol):
+  app/controllers/exercises_controller.rb:7:in `index'
+
+Rendered rescues/_trace (26.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:39:55) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+
+NameError (undefined local variable or method `exercise' for #<ExercisesController:0x2436a78>):
+  app/controllers/exercises_controller.rb:7:in `index'
+
+Rendered rescues/_trace (86.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:40:08) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+
+NameError (undefined local variable or method `exercises' for #<ExercisesController:0x264b7f0>):
+  app/controllers/exercises_controller.rb:7:in `index'
+
+Rendered rescues/_trace (26.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:40:09) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+
+NameError (undefined local variable or method `exercises' for #<ExercisesController:0x2524c00>):
+  app/controllers/exercises_controller.rb:7:in `index'
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:40:25) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+  [4;35;1mSQL (22.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mExercise Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+NoMethodError (undefined method `muscle_id' for #<Class:0x242b434>):
+  app/controllers/exercises_controller.rb:7:in `index'
+
+Rendered rescues/_trace (89.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:40:40) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mExercise Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+NoMethodError (undefined method `muscle_id' for #<Class:0x263ac70>):
+  app/controllers/exercises_controller.rb:6:in `index'
+
+Rendered rescues/_trace (27.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:40:45) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mExercise Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+NoMethodError (undefined method `muscle_id' for #<Class:0x251d964>):
+  app/controllers/exercises_controller.rb:6:in `index'
+
+Rendered rescues/_trace (26.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:41:48) [GET]
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+NoMethodError (undefined method `muscle_id' for #<Class:0x242f278>):
+  app/controllers/exercises_controller.rb:6:in `index'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:42:07) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mExercise Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+NoMethodError (undefined method `muscle_id' for #<Class:0x264db7c>):
+  app/controllers/exercises_controller.rb:7:in `index'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:42:48) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Muscle without an ID):
+  app/controllers/exercises_controller.rb:6:in `index'
+
+Rendered rescues/_trace (26.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:42:49) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Muscle without an ID):
+  app/controllers/exercises_controller.rb:6:in `index'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:43:36) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mExercise Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+NoMethodError (undefined method `muscle_id' for #<Class:0x265eff8>):
+  app/controllers/exercises_controller.rb:6:in `index'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:44:58) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+
+ActionView::TemplateError (undefined local variable or method `muscle_id' for #<ActionView::Base:0x2550120>) on line #10 of app/views/exercises/index.html.erb:
+7:   </tr>
+8: 
+9: <% @exercises.each do |exercise| %>
+10: <% @fuck=Muscle.find(muscle_id)%>
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+
+    app/views/exercises/index.html.erb:10
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:45:10) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (Couldn't find Muscle without an ID) on line #10 of app/views/exercises/index.html.erb:
+7:   </tr>
+8: 
+9: <% @exercises.each do |exercise| %>
+10: <% @fuck=Muscle.find(exercise.muscle_id)%>
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+
+    app/views/exercises/index.html.erb:10
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:45:11) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mExercise Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (Couldn't find Muscle without an ID) on line #10 of app/views/exercises/index.html.erb:
+7:   </tr>
+8: 
+9: <% @exercises.each do |exercise| %>
+10: <% @fuck=Muscle.find(exercise.muscle_id)%>
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+
+    app/views/exercises/index.html.erb:10
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (37.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:45:22) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.7ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mExercise Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #14 of app/views/exercises/index.html.erb:
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+14:     <td><%=h @muscle.name %></td>
+15:     <td><%= link_to 'Show', exercise %></td>
+16:     <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+17:     <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/exercises/index.html.erb:14
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:45:23) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mMuscle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mExercise Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #14 of app/views/exercises/index.html.erb:
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+14:     <td><%=h @muscle.name %></td>
+15:     <td><%= link_to 'Show', exercise %></td>
+16:     <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+17:     <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/exercises/index.html.erb:14
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:45:31) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #13 of app/views/exercises/index.html.erb:
+10:   <tr>
+11:     <td><%=h exercise.name %></td>
+12:     <td><%=h exercise.muscle_id %></td>
+13:     <td><%=h @muscle.name %></td>
+14:     <td><%= link_to 'Show', exercise %></td>
+15:     <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+16:     <td><%= link_to 'Destroy', exercise, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/exercises/index.html.erb:13
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:45:42) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mMuscle Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mMuscle Load (0.7ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mExercise Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 35ms (View: 25, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:45:56) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.3ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mExercise Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (Couldn't find Muscle without an ID) on line #10 of app/views/exercises/index.html.erb:
+7:   </tr>
+8: 
+9: <% @exercises.each do |exercise| %>
+10: <% @fuck=Muscle.find(exercise.muscle_id)%>
+11:   <tr>
+12:     <td><%=h exercise.name %></td>
+13:     <td><%=h exercise.muscle_id %></td>
+
+    app/views/exercises/index.html.erb:10
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (100.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:46:37) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mMuscle Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.7ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mExercise Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 41ms (View: 29, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:46:48) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mMuscle Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.7ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 45ms (View: 34, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:47:25) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (Couldn't find Muscle without an ID) on line #10 of app/views/exercises/index.html.erb:
+7:   </tr>
+8: 
+9: <% @exercises.each do |exercise| %>
+10: <% @fuck=Muscle.find(exercise.muscle_id)%>
+11: <%=h @fuck.name %>
+12:   <tr>
+13:     <td><%=h exercise.name %></td>
+
+    app/views/exercises/index.html.erb:10
+    app/views/exercises/index.html.erb:9:in `each'
+    app/views/exercises/index.html.erb:9
+    app/controllers/exercises_controller.rb:8:in `index'
+
+Rendered rescues/_trace (100.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:47:40) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mMuscle Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mMuscle Load (0.8ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mExercise Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 47ms (View: 35, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#destroy (for 127.0.0.1 at 2010-03-12 20:47:43) [DELETE]
+  Parameters: {"authenticity_token"=>"dMDvIEve7HjPMkCoYzNwvsA+5De8KudiXokA4V6hV6w=", "id"=>"3"}
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.7ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mExercise Destroy (0.2ms)[0m   [0mDELETE FROM `exercises` WHERE `id` = 3[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/exercises
+Completed in 10ms (DB: 3) | 302 Found [http://0.0.0.0/exercises/3]
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:47:43) [GET]
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 39ms (View: 28, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#destroy (for 127.0.0.1 at 2010-03-12 20:47:45) [DELETE]
+  Parameters: {"authenticity_token"=>"dMDvIEve7HjPMkCoYzNwvsA+5De8KudiXokA4V6hV6w=", "id"=>"4"}
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.6ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mExercise Destroy (0.2ms)[0m   [0mDELETE FROM `exercises` WHERE `id` = 4[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/exercises
+Completed in 9ms (DB: 3) | 302 Found [http://0.0.0.0/exercises/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:47:45) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mMuscle Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.8ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mExercise Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 30ms (View: 18, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#destroy (for 127.0.0.1 at 2010-03-12 20:47:47) [DELETE]
+  Parameters: {"authenticity_token"=>"dMDvIEve7HjPMkCoYzNwvsA+5De8KudiXokA4V6hV6w=", "id"=>"7"}
+  [4;35;1mExercise Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.7ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 7) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mExercise Destroy (0.2ms)[0m   [0;1mDELETE FROM `exercises` WHERE `id` = 7[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/exercises
+Completed in 9ms (DB: 3) | 302 Found [http://0.0.0.0/exercises/7]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:47:47) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mMuscle Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mMuscle Load (0.3ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mExercise Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 23ms (View: 14, DB: 3) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:47:53) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mMuscle Load (0.3ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 2) [0m
+Completed in 26ms (View: 16, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:48:15) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mMuscle Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mMuscle Load (0.3ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 2) [0m
+Completed in 34ms (View: 23, DB: 4) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#new (for 127.0.0.1 at 2010-03-12 20:48:35) [GET]
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/new
+  [4;35;1mMuscle Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+Completed in 18ms (View: 9, DB: 3) | 200 OK [http://0.0.0.0/exercises/new]
