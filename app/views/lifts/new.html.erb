@@ -9,7 +9,8 @@
   </p>
   <p>
     <%= f.label :exercise_id %><br />
-    <%= f.text_field :exercise_id %>
+
+    <%= f.select (:exercise_id, @exercises.collect {|exercise| [ exercise.name, exercise.id ] }) %>
   </p>
   <p>
     <%= f.label :weight %><br />

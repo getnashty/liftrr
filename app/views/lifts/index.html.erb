@@ -5,13 +5,17 @@
     <th>User</th>
     <th>Exercise</th>
     <th>Weight</th>
+    <th>Date</th>
   </tr>
 
 <% @lifts.each do |lift| %>
+<% @exname=Exercise.find(lift.exercise_id)%>
+
   <tr>
     <td><%=h lift.user_id %></td>
-    <td><%=h lift.exercise_id %></td>
-    <td><%=h lift.weight %></td>
+    <td><%=h @exname.name %></td>
+    <td><%=h lift.weight %> lbs</td>
+    <td><%=h lift.created_at %></td>
     <td><%= link_to 'Show', lift %></td>
     <td><%= link_to 'Edit', edit_lift_path(lift) %></td>
     <td><%= link_to 'Destroy', lift, :confirm => 'Are you sure?', :method => :delete %></td>
