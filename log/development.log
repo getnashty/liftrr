@@ -10574,3 +10574,118 @@ Rendering template within layouts/exercises
 Rendering exercises/new
   [4;35;1mMuscle Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
 Completed in 18ms (View: 9, DB: 3) | 200 OK [http://0.0.0.0/exercises/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExercises (20100312032713)
+Migrating to CreateMuscles (20100312224537)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `muscles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `muscles`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:51:46) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:51:49) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#new (for 127.0.0.1 at 2010-03-12 20:51:51) [GET]
+  [4;36;1mExercise Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mMuscle Load (224.9ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/new
+  [4;36;1mMuscle Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+Completed in 242ms (View: 6, DB: 228) | 200 OK [http://0.0.0.0/exercises/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#create (for 127.0.0.1 at 2010-03-12 20:51:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"dMDvIEve7HjPMkCoYzNwvsA+5De8KudiXokA4V6hV6w=", "exercise"=>{"name"=>"dfdsf", "muscle_id"=>"1"}}
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mExercise Create (0.2ms)[0m   [0mINSERT INTO `exercises` (`name`, `updated_at`, `muscle_id`, `created_at`) VALUES('dfdsf', '2010-03-13 01:51:55', 1, '2010-03-13 01:51:55')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/exercises/10
+Completed in 10ms (DB: 2) | 302 Found [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#show (for 127.0.0.1 at 2010-03-12 20:51:55) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.5ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 10) [0m
+Rendering template within layouts/exercises
+Rendering exercises/show
+Completed in 8ms (View: 2, DB: 2) | 200 OK [http://0.0.0.0/exercises/10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:51:56) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:51:58) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:51:59) [GET]
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-12 20:52:04) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.3ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mMuscle Load (0.3ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 90ms (View: 20, DB: 3) | 200 OK [http://0.0.0.0/exercises]
