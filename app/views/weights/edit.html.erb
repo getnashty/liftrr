@@ -1,0 +1,24 @@
+<h1>Editing weight</h1>
+
+<% form_for(@weight) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :exercise_id %><br />
+    <%= f.text_field :exercise_id %>
+  </p>
+  <p>
+    <%= f.label :max_weight %><br />
+    <%= f.text_field :max_weight %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @weight %> |
+<%= link_to 'Back', weights_path %>

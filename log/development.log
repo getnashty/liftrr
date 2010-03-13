@@ -11371,3 +11371,12 @@ Processing LiftsController#new (for 127.0.0.1 at 2010-03-13 10:12:52) [GET]
 Rendering template within layouts/lifts
 Rendering lifts/new
 Completed in 14ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/lifts/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-13 10:16:51) [GET]
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/lifts]

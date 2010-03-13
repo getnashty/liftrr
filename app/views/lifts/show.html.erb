@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @lift.user_id %>
+</p>
+
+<p>
+  <b>Exercise:</b>
+  <%=h @lift.exercise_id %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%=h @lift.weight %>
+</p>
+
+
+<%= link_to 'Edit', edit_lift_path(@lift) %> |
+<%= link_to 'Back', lifts_path %>

@@ -1,0 +1,24 @@
+<h1>Listing lifts</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Exercise</th>
+    <th>Weight</th>
+  </tr>
+
+<% @lifts.each do |lift| %>
+  <tr>
+    <td><%=h lift.user_id %></td>
+    <td><%=h lift.exercise_id %></td>
+    <td><%=h lift.weight %></td>
+    <td><%= link_to 'Show', lift %></td>
+    <td><%= link_to 'Edit', edit_lift_path(lift) %></td>
+    <td><%= link_to 'Destroy', lift, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New lift', new_lift_path %>
