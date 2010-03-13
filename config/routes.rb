@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :weights
+  map.resources :lifts
 
   map.resources :muscles
 
