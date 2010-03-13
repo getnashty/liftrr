@@ -11135,3 +11135,25 @@ Processing WeightsController#index (for 127.0.0.1 at 2010-03-13 09:55:25) [GET]
 Rendering template within layouts/weights
 Rendering weights/index
 Completed in 5ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/weights]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateExercises (20100312032713)
+Migrating to CreateMuscles (20100312224537)
+Migrating to CreateWeights (20100313145029)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `maxes`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `maxes`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `maxes`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `muscles`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `muscles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `weights`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `weights`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `weights`[0m
