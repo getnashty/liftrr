@@ -18,14 +18,6 @@ ActiveRecord::Schema.define(:version => 20100313145029) do
     t.datetime "updated_at"
   end
 
-  create_table "maxes", :force => true do |t|
-    t.integer  "exercise_id"
-    t.integer  "weight"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "muscles", :force => true do |t|
     t.text     "name"
     t.datetime "created_at"
