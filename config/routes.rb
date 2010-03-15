@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  Clearance::Routes.draw(map)
   map.resources :lifts
 
   map.resources :muscles
@@ -6,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :exercises
   
   map.resources :reports, :collection => {:progress => :get}
+  
+  map.root :controller => 'lifts'
   
   # The priority is based upon order of creation: first created -> highest priority.
 
