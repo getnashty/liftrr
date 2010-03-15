@@ -1,4 +1,5 @@
 class LiftsController < ApplicationController
+    before_filter :authenticate
   # GET /lifts
   # GET /lifts.xml
   def index
