@@ -23569,3 +23569,167 @@ DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Pleas
 Rendering reports/progress
   [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
 Completed in 19ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-14 22:25:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Rendered users/_form (3.4ms)
+Completed in 22ms (View: 16, DB: 2) | 200 OK [http://0.0.0.0/sign_up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#create (for 127.0.0.1 at 2010-03-14 22:25:58) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"nashdev@venturemedias.com"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"xHK/kUrdfYESmmCut0HD3G2k9g5JsRVUxTQ1+SCpVF8=", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'nashdev@venturemedias.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`encrypted_password`, `salt`, `updated_at`, `remember_token`, `confirmation_token`, `email`, `email_confirmed`, `created_at`) VALUES('a052a80747d9ffb6413258bf6603f209688a8296', '8fc6b40090958e95bd13c81b137211cf90dabb55', '2010-03-15 02:25:58', 'a79c677cf981bcbeaeb870e75b65f50e9951b3f1', 'b18806507b07af1ffaa07b8c79ae31cbafc4c9cc', 'nashdev@venturemedias.com', 0, '2010-03-15 02:25:58')[0m
+Sent mail to nashdev@venturemedias.com
+
+Date: Sun, 14 Mar 2010 22:25:58 -0400
+From: team@liftrr.com
+To: nashdev@venturemedias.com
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=b18806507b07af1ffaa07b8c79ae31cbafc4c9cc
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 184ms (DB: 4) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-14 22:25:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-14 22:26:08) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"xHK/kUrdfYESmmCut0HD3G2k9g5JsRVUxTQ1+SCpVF8=", "session"=>{"password"=>"[FILTERED]", "email"=>"nashdev@venturemedias.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nashdev@venturemedias.com') LIMIT 1[0m
+Sent mail to nashdev@venturemedias.com
+
+Date: Sun, 14 Mar 2010 22:26:08 -0400
+From: team@liftrr.com
+To: nashdev@venturemedias.com
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=b18806507b07af1ffaa07b8c79ae31cbafc4c9cc
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 18ms (DB: 4) | 302 Found [http://0.0.0.0/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-14 22:26:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-14 22:26:11) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"xHK/kUrdfYESmmCut0HD3G2k9g5JsRVUxTQ1+SCpVF8=", "session"=>{"password"=>"[FILTERED]", "email"=>""}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = '') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 13ms (View: 4, DB: 3) | 401 Unauthorized [http://0.0.0.0/session]
+  [4;35;1mSQL (1.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-14 22:26:14) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"xHK/kUrdfYESmmCut0HD3G2k9g5JsRVUxTQ1+SCpVF8=", "session"=>{"password"=>"[FILTERED]", "email"=>""}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = '') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 77ms (View: 5, DB: 3) | 401 Unauthorized [http://0.0.0.0/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-14 22:27:02) [GET]
+
+ActionController::RoutingError (No route matches "/session%5Cnew" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-14 22:27:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/session/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-14 22:27:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-14 22:27:20) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"xHK/kUrdfYESmmCut0HD3G2k9g5JsRVUxTQ1+SCpVF8=", "session"=>{"password"=>"[FILTERED]", "email"=>"nashdev@venturemedias.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nashdev@venturemedias.com') LIMIT 1[0m
+Sent mail to nashdev@venturemedias.com
+
+Date: Sun, 14 Mar 2010 22:27:20 -0400
+From: team@liftrr.com
+To: nashdev@venturemedias.com
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=b18806507b07af1ffaa07b8c79ae31cbafc4c9cc
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 17ms (DB: 2) | 302 Found [http://0.0.0.0/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-14 22:27:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-14 22:30:27) [GET]
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 34ms (View: 23, DB: 3) | 200 OK [http://0.0.0.0/]
