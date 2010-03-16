@@ -1,24 +1,120 @@
-<h2>Sign in</h2>
+<style type="text/css">
+<!--
+#login-footer {
+	background-image: url(images/login-bottom.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 16px;
+	width: 294px;
+}
+#login-main {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #898989;
+	border-left-color: #898989;
+	width: 292px;
+	text-align:center;
+	height:270px;
+}
+#login-header {
+	background-image: url(images/login_top.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 294px;
+	height: 11px;
+}
+#login-box {
+	margin: 120px auto;
+	width: 294px;
+	font-size:12px;
+	font-family:arial;
+}
+.text_field {
+	width:225px;
+	text-align:left;
+	margin:auto;
+	padding:10px 0px;
+}
+.text_field input{
+	background-image: url(images/input-bg.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-style:solid;
+	border-width:1px;
+	border-color:#898989;
+	width:225px;
+	padding:8px;
+	font-size:12px;
+	font-family:arial;
+}
+.divider{
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#ccc;
+	width:245px;
+	padding-top:10px;
+	margin:auto;
+}
+.signuplinks{
+	float:left;
+	text-align:left;
+	padding:0px 0px 0px 32px;
+}
+.signuplinks a{
+	text-decoration:none;
+	color:#999;
+}
+.submit_field {
+	float:right;
+	margin-right:32px;
+	margin-top:8px;
+}
+.submit_field input{
+	background-color:red;
+	border-style:solid;
+	border-color:red;
+	border-width:1px;
+	color:#fff;
+	font-weight:bold;
+	padding:8px;
+	font-size:16px;
+}
+-->
+</style>
 
-<% form_for :session, :url => session_path do |form| %>
-  <div class="text_field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-  <div class="text_field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  <div class="submit_field">
-    <%= form.submit "Sign in", :disable_with => "Please wait..." %>
-  </div>
-<% end %>
+<div id="login-box">
+    	
+        <div id="login-header"></div>
+        
+        <div id="login-main">   
+          <img src="images/liftrr-logo.png" width="192" height="72" alt="logo" />
+			
+			<div class="divider"></div>
+		
+			<% form_for :session, :url => session_path do |form| %>
+			  <div class="text_field">
+			    <%= form.label :email %><br/>
+			    <%= form.text_field :email %>
+			  </div>
+			  <div class="text_field">
+			    <%= form.label :password %><br/>
+			    <%= form.password_field :password %>
+			  </div>
+			  <div class="submit_field">
+			    <%= form.submit "Sign in", :disable_with => "Please wait..." %>
+			  </div>
+			<% end %>
+			
+			
+				<div class="signuplinks">
+			    <%= link_to "Sign up", sign_up_path %><Br/>
+			    <%= link_to "Forgot password?", new_password_path %>
+				</div>
 
-<ul>
-  <li>
-    <%= link_to "Sign up", sign_up_path %>
-  </li>
-  <li>
-    <%= link_to "Forgot password?", new_password_path %>
-  </li>
-</ul>
+        </div>
+        
+        <div id="login-footer"></div>
+    
+    </div>

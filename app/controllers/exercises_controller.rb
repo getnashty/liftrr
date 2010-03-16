@@ -1,4 +1,6 @@
 class ExercisesController < ApplicationController
+  before_filter :authenticate
+  
   # GET /exercises
   # GET /exercises.xml
   def index

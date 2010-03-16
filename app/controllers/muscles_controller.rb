@@ -1,4 +1,6 @@
 class MusclesController < ApplicationController
+  before_filter :authenticate
+  
   # GET /muscles
   # GET /muscles.xml
   def index
